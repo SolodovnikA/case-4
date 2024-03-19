@@ -32,5 +32,5 @@ match meal:
     case 1:
         if broke(budget,cost) == True: print(f'{ru.EXPENSES} {meal} {ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
               f' {(broke(budget,cost))//PROTEIN_COST}')
-        else
+        else: print(f'{ru.LACK} {ru.ADD}')
 
