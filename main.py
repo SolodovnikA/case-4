@@ -28,14 +28,18 @@ def broke(x, y):
     return leftover > 0
 
 
-def main_function(meal, portions, budget):
+def main_function(meal, budget):
     match meal:
         case 1:
-            if broke(budget, cost):
-                print(f'{ru.EXPENSES} {meal} {ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
+            if broke(budget, cost): print(f'{ru.EXPENSES} {ru.OPTION1} {ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
                       f'{(broke(budget, cost)) // PROTEIN_COST}')
-            else:
-                print(f'{ru.LACK} {ru.ADD}')
+            else: print(f'{ru.LACK} {ru.ADD} {cost-budget} {ru.RUBLS}')
+        case 2:
+            if broke(budget, cost):  print(f'{ru.EXPENSES} {ru.OPTION2} {ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
+                      f'{(broke(budget, cost)) // PROTEIN_COST}')
+            else: print(f'{ru.LACK} {ru.ADD} {cost - budget} {ru.RUBLS}')
+        case _:
+            print(f'{ru.ERROR}')
 
 
 if __name__ == "__main__":
