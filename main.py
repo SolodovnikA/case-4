@@ -4,14 +4,12 @@
 
 import local as ru
 
-cost = 0
-protein = 0
-leftover = 0
-
 BAR_COST = 99
 FISH_COST = 314.15
 CHICKEN_COST = 499.29
 
+cost = 0
+leftover = 0
 
 def fish(x):
     cost = FISH_COST * x
