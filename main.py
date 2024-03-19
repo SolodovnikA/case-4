@@ -51,6 +51,9 @@ def main_function(meal, prtns, budget):
                                                         f' {int((budget-chicken(prtns)) // BAR_COST)}')
             else: result = f'{ru.LACK} {ru.ADD} {round(chicken(prtns)-budget, 2)} {ru.RUBLS}'
             print(result)
+        case _:
+            print(ru.ERROR)
+
 
 
 if __name__ == "__main__":
