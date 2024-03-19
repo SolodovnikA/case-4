@@ -30,14 +30,13 @@ def broke(x, y):
 def main_function(meal, prtns, budget):
     match meal:
         case 1:
-            if broke(budget, fish(prtns)) == True: print(f'{ru.FOR_MEAL} {ru.OPTION1} {ru.EXPENSES} {fish(prtns)}'
-                                          f' {ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
-                                          f' {int((budget-fish(prtns)) // BAR_COST)}')
+            if broke(budget, fish(prtns)): print(f'{ru.FOR_MEAL} {ru.OPTION1} {ru.EXPENSES} {fish(prtns)} {ru.RUBLS}\n'
+                                                 f' {ru.PROSPERITY}\n {ru.BAR} {int((budget-fish(prtns)) // BAR_COST)}')
             else: print(f'{ru.LACK} {ru.ADD} {round(fish(prtns)-budget, 2)} {ru.RUBLS}')
         case 2:
             if broke(budget, chicken(prtns)): print(f'{ru.FOR_MEAL} {ru.OPTION2} {ru.EXPENSES} {chicken(prtns)}'
-                                          f' {ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
-                                          f' {int((budget-chicken(prtns)) // BAR_COST)}')
+                                                    f' {ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
+                                                    f' {int((budget-chicken(prtns)) // BAR_COST)}')
             else: print(f'{ru.LACK} {ru.ADD} {round(chicken(prtns)-budget, 2)} {ru.RUBLS}')
 
 
