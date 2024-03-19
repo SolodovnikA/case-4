@@ -10,6 +10,7 @@ CHICKEN_COST = 499.29
 
 cost = 0
 leftover = 0
+result = 0
 
 
 def fish(x):
@@ -39,14 +40,17 @@ def main_function(meal, prtns, budget):
     """
     match meal:
         case 1:
-            if broke(budget, fish(prtns)): print(f'{ru.FOR_MEAL} {ru.OPTION1} {ru.EXPENSES} {fish(prtns)} {ru.RUBLS}\n'
-                                                 f' {ru.PROSPERITY}\n {ru.BAR} {int((budget-fish(prtns)) // BAR_COST)}')
-            else: print(f'{ru.LACK} {ru.ADD} {round(fish(prtns)-budget, 2)} {ru.RUBLS}')
+            if broke(budget, fish(prtns)): result = (f'{ru.FOR_MEAL} {ru.OPTION1} {ru.EXPENSES} {fish(prtns)} '
+                                                     f'{ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR} {int((budget-fish(prtns)) 
+                                                                                                    // BAR_COST)}')
+            else: result = f'{ru.LACK} {ru.ADD} {round(fish(prtns)-budget, 2)} {ru.RUBLS}'
+            print(result)
         case 2:
-            if broke(budget, chicken(prtns)): print(f'{ru.FOR_MEAL} {ru.OPTION2} {ru.EXPENSES} {chicken(prtns)}'
-                                                    f' {ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
-                                                    f' {int((budget-chicken(prtns)) // BAR_COST)}')
-            else: print(f'{ru.LACK} {ru.ADD} {round(chicken(prtns)-budget, 2)} {ru.RUBLS}')
+            if broke(budget, chicken(prtns)): result = (f'{ru.FOR_MEAL} {ru.OPTION2} {ru.EXPENSES} {chicken(prtns)} '
+                                                        f'{ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
+                                                        f' {int((budget-chicken(prtns)) // BAR_COST)}')
+            else: result = f'{ru.LACK} {ru.ADD} {round(chicken(prtns)-budget, 2)} {ru.RUBLS}'
+            print(result)
 
 
 if __name__ == "__main__":
