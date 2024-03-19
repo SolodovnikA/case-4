@@ -12,7 +12,6 @@ cost = 0
 leftover = 0
 
 
-# noinspection PyInterpreter
 def fish(x):
     cost = FISH_COST * x
     return cost
