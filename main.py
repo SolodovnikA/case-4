@@ -30,7 +30,7 @@ portions = int(input(ru.QUESTION_2)) # local in ()
 budget = int(input(ru.QUESTION_3)) # local in ()
 match meal:
     case 1:
-        if broke(budget,cost) == True: print(f'{ru.EXPENSES} {meal} {ru.RUBLS}\n {ru.PROSPERITY}\n {BAR}'
+        if broke(budget,cost) == True: print(f'{ru.EXPENSES} {meal} {ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
               f' {(broke(budget,cost))//PROTEIN_COST}')
         else
 
