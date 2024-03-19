@@ -11,10 +11,11 @@ CHICKEN_COST = 499.29
 cost = 0
 leftover = 0
 
+
+# noinspection PyInterpreter
 def fish(x):
     cost = FISH_COST * x
     return cost
-
 
 
 def chicken(x):
@@ -41,7 +42,7 @@ def main_function(meal, prtns, budget):
 
 
 if __name__ == "__main__":
-    meal = float(input(ru.QUESTION_1))  # local in ()
-    prtns = float(input(ru.QUESTION_2))  # local in ()
-    budget = float(input(ru.QUESTION_3))  # local in ()
+    meal = float(input(ru.QUESTION_1))
+    prtns = float(input(ru.QUESTION_2))
+    budget = float(input(ru.QUESTION_3))
     main_function(meal, prtns, budget)
