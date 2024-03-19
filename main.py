@@ -28,7 +28,7 @@ def chicken(x):
 
 def broke(x, y):
     """
-    A function that calculates the balance of a purchase.
+    This function calculates the balance of a purchase.
     """
     leftover = x - y
     return leftover > 0
@@ -36,7 +36,7 @@ def broke(x, y):
 
 def main_function(meal, prtns, budget):
     """
-    final calculation
+    Final calculation.
     """
     match meal:
         case 1:
