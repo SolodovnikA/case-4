@@ -41,8 +41,8 @@ def main_function(meal, prtns, budget):
     match meal:
         case 1:
             if broke(budget, fish(prtns)): result = (f'{ru.FOR_MEAL} {ru.OPTION1} {ru.EXPENSES} {fish(prtns)} '
-                                                     f'{ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR} {int((budget-fish(prtns)) 
-                                                                                                    // BAR_COST)}')
+                                                     f'{ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
+                                                     f'{int((budget-fish(prtns)) // BAR_COST)}')
             else: result = f'{ru.LACK} {ru.ADD} {round(fish(prtns)-budget, 2)} {ru.RUBLS}'
             print(result)
         case 2:
