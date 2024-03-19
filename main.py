@@ -27,4 +27,5 @@ budget = int(input()) # local in ()
 meal = int(input()) # local in ()
 match meal:
     case 1:
+        print(f'{}')
 
