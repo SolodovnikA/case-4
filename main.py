@@ -31,11 +31,11 @@ def broke(x, y):
 def main_function(meal, budget):
     match meal:
         case 1:
-            if broke(budget, cost): print(f'{ru.EXPENSES} {ru.OPTION1} {ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
+            if broke(budget, cost): print(f'{ru.FOR_MEAL} {ru.OPTION1} {ru.EXPENSES} {ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
                       f'{(broke(budget, cost)) // PROTEIN_COST}')
             else: print(f'{ru.LACK} {ru.ADD} {cost-budget} {ru.RUBLS}')
         case 2:
-            if broke(budget, cost):  print(f'{ru.EXPENSES} {ru.OPTION2} {ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
+            if broke(budget, cost):  print(f'{ru.FOR_MEAL} {ru.OPTION2} {ru.EXPENSES} {ru.RUBLS}\n {ru.PROSPERITY}\n {ru.BAR}'
                       f'{(broke(budget, cost)) // PROTEIN_COST}')
             else: print(f'{ru.LACK} {ru.ADD} {cost - budget} {ru.RUBLS}')
         case _:
