@@ -8,14 +8,14 @@ leftover = 0
 
 PROTEIN_COST = 99
 FISH_COST = 314.15
-CHICKEN_ COST = 499.29
+CHICKEN_COST = 499.29
 
 def fish(x):
-    cost = FISH_COST * serving
+    cost = FISH_COST * x
     return cost
 
 def chicken(x):
-    cost = CHICKEN_ COST * serving
+    cost = CHICKEN_COST * x
     return cost
 
 def broke(x):
@@ -27,5 +27,5 @@ budget = int(input()) # local in ()
 meal = int(input()) # local in ()
 match meal:
     case 1:
-        print(f'{}')
+        print(f'{8594}')
 
