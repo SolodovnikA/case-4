@@ -2,6 +2,8 @@
 # Developers: Solodovnik A., Soknyshev D., Kabanova M., Kim A.
 #
 
+import local as ru
+
 cost = 0
 protein = 0
 leftover = 0
@@ -9,6 +11,7 @@ leftover = 0
 PROTEIN_COST = 99
 FISH_COST = 314.15
 CHICKEN_COST = 499.29
+
 
 def fish(x):
     cost = FISH_COST * x
@@ -18,14 +21,16 @@ def chicken(x):
     cost = CHICKEN_COST * x
     return cost
 
-def broke(x):
-    leftover = budget - cost
+def broke(x, y):
+    leftover = x - y
     return leftover > 0
 
-serving = int(input()) # local in ()
-budget = int(input()) # local in ()
-meal = int(input()) # local in ()
+meal = int(input(ru.QUESTION_1)) # local in ()
+portions = int(input(ru.QUESTION_2)) # local in ()
+budget = int(input(ru.QUESTION_3)) # local in ()
 match meal:
     case 1:
-        print(f'{8594}')
+        if broke(budget,cost) == True: print(f'{ru.EXPENSES} {meal} {ru.RUBLS}\n {ru.PROSPERITY}\n {BAR}'
+              f' {(broke(budget,cost))//PROTEIN_COST}')
+        else
 
