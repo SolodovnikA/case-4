@@ -13,6 +13,9 @@ leftover = 0
 
 
 def fish(x):
+    """"
+    A function that calculates the final price of the meal.
+    """
     cost = FISH_COST * x
     return cost
 
@@ -23,11 +26,17 @@ def chicken(x):
 
 
 def broke(x, y):
+    """
+    A function that calculates the balance of a purchase.
+    """
     leftover = x - y
     return leftover > 0
 
 
 def main_function(meal, prtns, budget):
+    """
+    final calculation
+    """
     match meal:
         case 1:
             if broke(budget, fish(prtns)): print(f'{ru.FOR_MEAL} {ru.OPTION1} {ru.EXPENSES} {fish(prtns)} {ru.RUBLS}\n'
